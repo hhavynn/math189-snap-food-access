@@ -78,7 +78,7 @@ All percentage variables use safe division: denominator values ≤ 0 or NaN retu
 | `pct_no_vehicle` | [−10.19, 23.63] | 6,409 |
 | `pct_low_income_low_access` | [−18.92, 34.92] | 2,741 |
 
-Outliers are **not removed**. Because the fences go negative (the IQR formula applied to non-negative data), only the upper-tail outliers are meaningful. Inspect these tracts before modeling; consider robust regression or transformations if needed.
+Outliers are **not removed**. Because all three variables are non-negative, the lower IQR fence is meaningless (values cannot go below 0). Only the upper-tail counts are substantively relevant. Inspect high-value tracts before modeling; consider log transformation or robust regression if residuals are skewed.
 
 ---
 
